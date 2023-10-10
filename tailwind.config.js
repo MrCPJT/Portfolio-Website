@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./node_modules/flowbite/**/*.js"],
+  content: ["./index.html", "./node_modules/flowbite/**/*.js", "./pages/**/*",],
   theme: {
     extend: {},
   },
   plugins: [require('@tailwindcss/typography'), require('flowbite/plugin'), require("daisyui")],
-
+  safelist: [ { pattern: /alert-+/ } ],
   // daisyUI config (optional - here are the default values)
   daisyui: {
     themes: false, // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
