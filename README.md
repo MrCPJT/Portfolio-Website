@@ -10,6 +10,10 @@ Currently, the website features `Home`, `About`, `Projects` and `Writings` pages
 ```[tasklist]
 To Do:
 - [ ] Flesh out `About` page
+- [ ] Deployment of futue machine learning projects (flask?)
 - [ ] Implement backend for `Contact` section
-- [ ] 
+- [ ] Markdown system for articles?
+- [ ] PDF viewer for resume or seperate page
+- [ ] Japanese language support
+- [ ] Tags for project and articles
 ```
