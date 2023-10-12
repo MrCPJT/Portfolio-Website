@@ -12,9 +12,12 @@ To Do:
 - [ ] Flesh out `About` page
 - [ ] Deployment of futue machine learning projects (flask?)
 - [ ] Implement backend for `Contact` section
+- [ ] Japanese language support
+- [ ] Tags for project and articles
+- [ ] Fix article link on home page
+
 - [X] Markdown system for articles?
 - [X] .ipynb support
 - [X] PDF viewer for resume or seperate page
-- [ ] Japanese language support
-- [ ] Tags for project and articles
+
 ```
