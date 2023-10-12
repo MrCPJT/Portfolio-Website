@@ -5,7 +5,6 @@ module.exports = {
     extend: {},
   },
   plugins: [require('@tailwindcss/typography'), require('flowbite/plugin'), require("daisyui")],
-  safelist: [ { pattern: /alert-+/ } ],
   // daisyUI config (optional - here are the default values)
   daisyui: {
     themes: false, // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
