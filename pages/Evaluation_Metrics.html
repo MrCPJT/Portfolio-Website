@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <title>Connor Tynan</title>
+    
+    <link href="../dist/output.css" rel="stylesheet" >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+</head>
+<body id="body_main" class="bg-white no-scrollbar text-gray-400">
+
+    <!-- Dark theme toggle -->
+    <!-- Top of 'body' to avoid 'flash of unstyled content' -->
+
+    <script>
+        function themeToggle() {
+            
+            var element = document.getElementById("body_main")
+            if (element.classList.contains("dark")) {
+                element.classList.remove("dark")
+                localStorage.setItem("theme","light")
+            } else {
+                element.classList.add("dark")
+                localStorage.setItem("theme","dark")
+            }
+            
+            var change = document.getElementById("Theme_Button_Menu")
+            if (change.innerText == "Light") {
+                change.innerText = "Dark";
+            }
+            else {
+                change.innerText = "Light";
+            }
+
+            var change = document.getElementById("Theme_Button_Nav")
+            if (change.innerText == "Light") {
+                change.innerText = "Dark";
+            }
+            else {
+                change.innerText = "Light";
+            }
+        }
+    </script>
+    
+    <div class="dark:bg-neutral transition ease-in-out duration-300 dark:text-gray-400">
+        <div class="flex flex-col max-w-screen-xl mx-auto min-h-screen">
+            
+            <!-- Beginning of navigation bar -->
+
+            <nav class="flex items-center justify-between flex-wrap bg-amber-500 dark:bg-indigo-500 p-6 transition ease-in-out duration-300">
+                
+                <!-- Logo/Home button -->
+
+                <div class="">
+                    <span class="text-white dark:text-indigo-100 font-semibold text-2xl">
+                        <a href="../index.html">Connor Tynan
+                            <span class="block max-w-0 group-hover:max-w-full ease-in-out duration-700 transition-all h-0.5 bg-white dark:bg-indigo-100"></span>
+                        </a>
+                    </span>
+                </div>
+
+                <!-- Mobile / zoomed-in menu dropdown -->
+
+                <div class="block dropdown dropdown-bottom dropdown-end sm:hidden">
+                    <button class="flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 transition ease-in-out duration-300 fill-amber-200 dark:fill-indigo-200 hover:bg-white dark:hover:bg-neutral hover:fill-amber-500 dark:hover:fill-indigo-500 hover:border-white rounded">
+                            <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                        </svg>                      
+                    </button>
+                    <ul class="dropdown-content menu z-[1] ease-in-out duration-300 rounded-box bg-amber-600 dark:bg-indigo-600 p-2 w-36 text-white dark:text-indigo-100 text-xl">
+                        <li><a href="../about.html"    class="mb-1 px-3 py-2 text-xl transition ease-in-out duration-300 border-0 hover:ring-4 hover:ring-amber-200 dark:hover:ring-indigo-200 hover:bg-white dark:hover:bg-neutral rounded-lg hover:text-amber-500 dark:hover:text-indigo-400">About Me</a></li>
+                        <li><a href="../projects.html" class="mb-1 px-3 py-2 text-xl transition ease-in-out duration-300 border-0 hover:ring-4 hover:ring-amber-200 dark:hover:ring-indigo-200 hover:bg-white dark:hover:bg-neutral rounded-lg hover:text-amber-500 dark:hover:text-indigo-400">Projects</a></li>
+                        <li><a href="../writings.html"  class="mb-1 px-3 py-2 text-xl transition ease-in-out duration-300 border-0 hover:ring-4 hover:ring-amber-200 dark:hover:ring-indigo-200 hover:bg-white dark:hover:bg-neutral rounded-lg hover:text-amber-500 dark:hover:text-indigo-400">Writings</a></li>
+                        
+                        <hr class="mb-1 border-white border-2 rounded dark:border-indigo-400 ease-in-out duration-300">
+                        
+                        <li><button id="Theme_Button_Menu" onclick="themeToggle()" class="mb-1 px-3 py-2 text-xl transition ease-in-out duration-300 border-0 hover:ring-4 hover:ring-amber-200 dark:hover:ring-indigo-200 hover:bg-white dark:hover:bg-neutral  rounded-lg hover:text-amber-500 dark:hover:text-indigo-400">Dark</button></li>
+                        
+                        <hr class="mb-1 border-white border-2 rounded dark:border-indigo-400 ease-in-out duration-300">
+                        
+                        <li>
+                            <select class="text-xl border-0 transition ease-in-out duration-300 rounded-lg bg-amber-600 dark:bg-indigo-600 hover:ring-4 hover:ring-amber-200 dark:hover:ring-indigo-200 focus:ring-4 focus:ring-amber-200 dark:focus:ring-indigo-200 hover:bg-white dark:hover:bg-neutral focus:bg-white dark:focus:bg-neutral hover:text-amber-500 dark:hover:text-indigo-400 focus:text-amber-500 dark:focus:text-indigo-400">
+                                <option value="GB" selected class="bg-white">ENG</option>
+                                <option value="JP" disabled class="bg-white">JPN</option>
+                            </select> 
+                        </li>  
+                    </ul>
+                </div>
+
+                <!-- Navigation bar buttons -->
+
+                <div class="hidden text-xl sm:flex font-semibold text-amber-200 dark:text-indigo-100">
+                    <a href="../about.html"    class="inline-block mx-1 transition ease-in-out duration-300 hover:ring-4 hover:ring-amber-200 dark:hover:ring-indigo-200 hover:bg-white dark:hover:bg-neutral rounded-lg py-3 px-3 hover:text-amber-500 dark:hover:text-indigo-400">About Me</a>
+                    <a href="../projects.html" class="inline-block mx-1 transition ease-in-out duration-300 hover:ring-4 hover:ring-amber-200 dark:hover:ring-indigo-200 hover:bg-white dark:hover:bg-neutral rounded-lg py-3 px-3 hover:text-amber-500 dark:hover:text-indigo-400">Projects</a>
+                    <a href="../writings.html"  class="inline-block mx-1 transition ease-in-out duration-300 hover:ring-4 hover:ring-amber-200 dark:hover:ring-indigo-200 hover:bg-white dark:hover:bg-neutral rounded-lg py-3 px-3 hover:text-amber-500 dark:hover:text-indigo-400">Writings</a>
+                    
+                    <button id="Theme_Button_Nav" onclick="themeToggle()" class="inline-block mx-1 transition ease-in-out duration-300 hover:ring-4 hover:ring-amber-200 dark:hover:ring-indigo-200 hover:bg-white dark:hover:bg-neutral rounded-lg py-3 px-3 hover:text-amber-500 dark:hover:text-indigo-400">Dark</button> 
+                    
+                    <button type="button"   class="inline-block mx-1">
+                        <select class="text-xl border-0 transition ease-in-out duration-300 rounded-lg py-3 px-3 bg-amber-500 dark:bg-indigo-500 hover:ring-4 hover:ring-amber-200 dark:hover:ring-indigo-200 focus:ring-4 focus:ring-amber-200 dark:focus:ring-indigo-200 hover:bg-white dark:hover:bg-neutral focus:bg-white dark:focus:bg-neutral hover:text-amber-500 dark:hover:text-indigo-400 focus:text-amber-500 dark:focus:text-indigo-400">
+                            <option value="GB" selected class="bg-white">ENG</option>
+                            <option value="JP" disabled class="bg-white">JPN</option>
+                        </select>   
+                    </button>
+                </div>
+            </nav>
+
+            <!-- End of navigation bar -->
+            <!-- Main article / content -->
+
+            <div class="flex flex-grow max-w-full px-6 pb-6 mt-14">
+                <div class="mx-auto max-w-full break-words prose-lg" style="width: 85ch;">
+                    <div id="article" class="min-h-screen">
+                        <div class="mx-auto max-w-full prose-lg mb-10" style="width: 75ch;">
+                            <p>Notes I made during 
+                                <a target="_blank" href="https://github.com/DataTalksClub/machine-learning-zoomcamp/tree/master/04-evaluation" class="underline">
+                                    week 4</a> of 
+                                <a target="_blank" href="https://github.com/DataTalksClub/machine-learning-zoomcamp/tree/master" class="underline">ML Zoomcamp 2023.</a>
+                            </p>
+                        </div>
+                        <iframe src="Evaluation_Metrics_nb.html" width="100%" height="14600px" scrolling="no" class="ease-in-out duration-300 overflow-hidden"></iframe>
+                        <div class="flex justify-between">
+                            <p>
+                                <a href="#" class="inline-block mx-0 py-2 px-3 border-2 dark:border-gray-400 transition ease-in-out duration-300 hover:ring-4 hover:ring-amber-200 dark:hover:ring-indigo-200 hover:bg-white dark:hover:bg-neutral rounded-lg hover:text-amber-500 dark:hover:text-indigo-400">Previous</a>
+                            </p>
+                            <p>
+                                <a href="#" class="inline-block mx-0 py-2 px-3 border-2 dark:border-gray-400 transition ease-in-out duration-300 hover:ring-4 hover:ring-amber-200 dark:hover:ring-indigo-200 hover:bg-white dark:hover:bg-neutral rounded-lg hover:text-amber-500 dark:hover:text-indigo-400">Next</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End of main article / content -->
+            <!-- Footer -->
+
+            <footer class="footer, block, mt-8">
+                <section class="flex items-center justify-center flex-wrap p-6">
+                    <nav class="flex flex-col sm:flex-row items-center justify-center p-1">
+                        <span class="sm:mx-2 flex items-center justify-center p-1">Made by Connor Tynan</span>
+                        <a href="https://github.com/MrCPJT" target="_blank" class="mt-auto sm:mx-2 flex items-center justify-center p-1"><span>GitHub</span><img id="GH_logo" src="../assets\github-mark.png" alt="GitHub" class="inline ml-1 object-contain h-5 invert-0 dark:invert transition ease-in-out duration-300"></a>
+                        <a href="https://www.linkedin.com/in/cpjt/" target="_blank" class="mt-auto sm:mx-2 flex items-center justify-center p-1"><span>LinkedIn</span><img src="../assets\LI-In-Bug.png" alt="LinkedIn" class="inline ml-1 object-contain h-5"></a>
+                    </nav>
+                </section>
+            </footer>
+
+            <!-- End of footer -->
+
+        </div>
+    </div>
+
+    <!-- Updating "theme" localStorage -->
+
+    <script>
+        if (localStorage.getItem("theme") == "dark") {
+            document.getElementById("body_main").classList.add("dark");
+            document.getElementById("Theme_Button_Nav").innerText = "Light";
+            document.getElementById("Theme_Button_Menu").innerText = "Light";
+            localStorage.setItem("theme","dark");
+        }
+    </script>
+
+    <!-- Calling flowbite plugin -->
+
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+</body>
+</html>
+
+<!-- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
