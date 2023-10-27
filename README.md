@@ -14,6 +14,7 @@ To Do:
 - [ ] Implement backend for `Contact` section
 - [ ] Japanese language support
 - [ ] Tags for project and articles
+- [ ] Fix mobile (sm breakpoint) drop-down button (may be specifically an iOS issue)
 
 - [X] Fix article link on home page
 - [X] Markdown system for articles?
