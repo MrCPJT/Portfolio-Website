@@ -7,6 +7,9 @@ Personal website developed for the sake of blogging about my interests and highl
 Currently, the website features `Home`, `About`, `Projects` and `Writings` pages.
 
 
+Styling handled by `Tailwind` (with `Daisy UI` + `Flowbite`) and `Bootstrap` (icons). `Quarto` for `.ipynb` integration. 
+
+
 ```[tasklist]
 To Do:
 - [ ] Flesh out `About` page
